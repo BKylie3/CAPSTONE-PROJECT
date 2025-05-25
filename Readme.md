@@ -217,6 +217,13 @@ INSERT INTO Booking (
   - **Foreign Keys**: Relationship enforcement
   - **Constraints**: `NOT NULL`, `UNIQUE`, and `CHECK` for value validation
 
+```sql 
+SELECT c.Name, t.Destination, b.Payment_Status
+FROM Booking b
+JOIN Customer c ON b.Customer_ID = c.Customer_ID
+JOIN Trip t ON b.Trip_ID = t.Trip_ID;
+```
+
 ### 4. **Physical Database Structure**
 - Fully implemented and normalized
 - Indexed and optimized for query performance
