@@ -116,7 +116,7 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 ### 📐 1. Table Creation
 Tables created using `CREATE TABLE` scripts aligned with logical model.
 
-#### Example: `Customer`
+`Customer`
 ```sql
 CREATE TABLE Customer (
   Customer_ID NUMBER PRIMARY KEY,
