@@ -162,7 +162,7 @@ CREATE TABLE Booking (
 
 ---
 
-###📥 2. Data Insertion
+### 📥 2. Data Insertion
 
  
 INSERT INTO Customer (Customer_ID, Name, Email, Phone, Preferences)
@@ -180,6 +180,16 @@ VALUES (101, 'City Hotel', 'Nairobi', 'Deluxe', 80.00);
 INSERT INTO Booking (Booking_ID, Customer_ID, Trip_ID, Payment_Status)
 VALUES (1001, 1, 301, 'Pending');
 
+---
+
+### 3️⃣ Data Integrity
+
+To ensure accurate and consistent data throughout the system:
+- **Primary Keys:** Guarantee uniqueness (e.g., Customer_ID, Trip_ID)
+- **Foreign Keys:** Maintain referential integrity across tables
+- **NOT NULL Constraints:** Prevent incomplete records (e.g., Trip.Destination)
+- **CHECK Constraints:** Enforce valid ranges (e.g., Price > 0)
+- **UNIQUE Constraints:** Avoid duplicates (e.g., Email in Customer)
 
 
 
