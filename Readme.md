@@ -104,6 +104,7 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 - **Username**: `Kylie`
 - **Password**: `Kylie`
 - **Privileges**: All admin privileges assigned
+
 ![Project 4](https://github.com/user-attachments/assets/7a73f26d-34d4-448c-ad67-267b2d4c5ae4)
 
 ### 🖥 OEM Monitoring
