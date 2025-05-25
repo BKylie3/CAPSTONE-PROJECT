@@ -127,6 +127,7 @@ CREATE TABLE Customer (
 );
 
 `Trip`
+```sql
 CREATE TABLE Trip (
   Trip_ID NUMBER PRIMARY KEY,
   Destination VARCHAR2(100) NOT NULL,
@@ -162,7 +163,7 @@ CREATE TABLE Booking (
 
 ---
 
-### 📥 2. Data Insertion
+#### 📥 2. Data Insertion
 
  
 INSERT INTO Customer (Customer_ID, Name, Email, Phone, Preferences)
@@ -182,7 +183,7 @@ VALUES (1001, 1, 301, 'Pending');
 
 ---
 
-### 3️⃣ Data Integrity
+#### 3️⃣ Data Integrity
 
 To ensure accurate and consistent data throughout the system:
 - **Primary Keys:** Guarantee uniqueness (e.g., Customer_ID, Trip_ID)
