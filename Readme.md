@@ -109,10 +109,6 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 
 ### 🖥 OEM Monitoring
 - Set up via **Oracle Enterprise Manager (OEM)**  
-- Screenshots included to verify:
-  - PDB creation
-  - Table deployment
-  - Relationships
 
 ---
 
