@@ -120,6 +120,25 @@ This phase focused on converting the logical data model into a physical Oracle d
 - Tables (`Customer`, `Trip`, `Transport`, `Accommodation`, `Booking`) were created based on the ERD.
 - Each table includes appropriate columns, data types, and constraints.
 
+## 🎯 Objectives
+
+- Perform **INSERT, UPDATE, DELETE** and **CREATE, ALTER, DROP** operations
+- Use **procedures, functions, and packages** to modularize logic
+- Apply **cursors** and **exception handling** for secure data interaction
+- Develop **testable queries** that reflect real-world business logic
+- Implement **analytical procedures** using grouped data
+
+---
+
+## 1️⃣ Database Operations (DML & DDL)
+
+### ✅ DML Examples
+#### Insert Booking Record
+```sql
+INSERT INTO Booking (Booking_ID, Customer_ID, Trip_ID, Booking_Date, Payment_Status)
+VALUES (1005, 2, 305, TO_DATE('2024-12-10', 'YYYY-MM-DD'), 'Pending');
+
+
 ### 2. **Data Insertion**
 - Realistic sample records were inserted to simulate real-world booking scenarios.
 - Data included multiple trips, transport modes, room types, and booking statuses.
