@@ -68,6 +68,8 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 5. Admin logs confirmation  
 
 📸 *Visual diagrams included in `/diagrams` folder*
+![Project 2](https://github.com/user-attachments/assets/e00c8594-3744-4467-af0d-3c805295df95)
+
 
 ---
 
