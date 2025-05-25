@@ -161,7 +161,8 @@ CREATE TABLE Booking (
 );
 
 ---
-####📥 2. Data Insertion
+
+###📥 2. Data Insertion
 
  
 INSERT INTO Customer (Customer_ID, Name, Email, Phone, Preferences)
