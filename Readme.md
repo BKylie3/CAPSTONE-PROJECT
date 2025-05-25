@@ -67,7 +67,6 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 4. Make payment  
 5. Admin logs confirmation  
 
-📸 *Visual diagrams included in `/diagrams` folder*
 ![Project 2](https://github.com/user-attachments/assets/e00c8594-3744-4467-af0d-3c805295df95)
 
 
@@ -93,6 +92,8 @@ Each actor (Customer, System, Admin) is assigned a lane in the **BPMN diagram** 
 ### 🧹 Normalization
 - Ensured 3rd Normal Form (3NF)  
 - Removed redundancy and ensured referential integrity
+
+![Project 3](https://github.com/user-attachments/assets/6040d37f-28fe-455f-9a50-c9336de54449)
 
 ---
 
