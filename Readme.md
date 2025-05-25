@@ -160,7 +160,7 @@ CREATE TABLE Booking (
   Payment_Status VARCHAR2(20) CHECK (Payment_Status IN ('Pending', 'Completed', 'Cancelled'))
 );
 
-
+---
 ###📥 2. Data Insertion
 
  
