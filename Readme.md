@@ -135,13 +135,81 @@ This phase focused on converting the logical data model into a physical Oracle d
 ### ✅ DML Examples
 #### Insert Booking Record
 ```sql
-INSERT INTO Booking (Booking_ID, Customer_ID, Trip_ID, Booking_Date, Payment_Status)
-VALUES (1005, 2, 305, TO_DATE('2024-12-10', 'YYYY-MM-DD'), 'Pending');
+CREATE TABLE Customer (
+  Customer_ID NUMBER PRIMARY KEY,
+  Name VARCHAR2(100) NOT NULL,
+  Email VARCHAR2(100) UNIQUE NOT NULL,
+  Phone VARCHAR2(15),
+  Preferences CLOB
+);
+```
+```sql
+CREATE TABLE Trip (
+  Trip_ID NUMBER PRIMARY KEY,
+  Destination VARCHAR2(100) NOT NULL,
+  Duration NUMBER CHECK (Duration > 0),
+  Price NUMBER(10,2) CHECK (Price > 0),
+  Max_Capacity NUMBER NOT NULL
+);
+```
+```sql
+CREATE TABLE Transport (
+  Transport_ID NUMBER PRIMARY KEY,
+  Type VARCHAR2(50) NOT NULL,
+  Capacity NUMBER,
+  Departure_Time TIMESTAMP,
+  Price NUMBER(10,2)
+);
+```
+```sql
+CREATE TABLE Accommodation (
+  Accom_ID NUMBER PRIMARY KEY,
+  Name VARCHAR2(100),
+  Location VARCHAR2(100),
+  Room_Type VARCHAR2(50),
+  Price_Per_Night NUMBER(10,2)
+);
+```
+```sql
+CREATE TABLE Booking (
+  Booking_ID NUMBER PRIMARY KEY,
+  Customer_ID NUMBER REFERENCES Customer(Customer_ID),
+  Trip_ID NUMBER REFERENCES Trip(Trip_ID),
+  Booking_Date DATE DEFAULT SYSDATE,
+  Payment_Status VARCHAR2(20) CHECK (Payment_Status IN ('Pending', 'Completed', 'Cancelled'))
+);
 
+```
 
 ### 2. **Data Insertion**
 - Realistic sample records were inserted to simulate real-world booking scenarios.
 - Data included multiple trips, transport modes, room types, and booking statuses.
+
+```sql
+INSERT INTO Customer (Customer_ID, Name, Email, Phone, Preferences)
+VALUES (1, 'Serge Shema', 'serge@email.com', '0782193530', 'Window seat');
+```
+
+```sql
+INSERT INTO Trip (Trip_ID, Destination, Duration, Price, Max_Capacity)
+VALUES (301, 'Kigali to Nairobi', 5, 400.00, 50);
+```
+
+```sql
+INSERT INTO Transport (Transport_ID, Type, Capacity, Departure_Time, Price)
+VALUES (201, 'Bus', 45, TO_TIMESTAMP('2024-12-01 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 50.00);
+```
+
+```sql
+INSERT INTO Accommodation (Accom_ID, Name, Location, Room_Type, Price_Per_Night)
+VALUES (101, 'City Hotel', 'Nairobi', 'Deluxe', 80.00);
+```
+
+```sql
+INSERT INTO Booking (
+  Booking_ID, Customer_ID, Trip_ID, Booking_Date, Payment_Statu) VALUES
+(1001, 1, 301, TO_DATE('2024-12-01', 'YYYY-MM-DD'), 'Pending');
+```
 
 ### 3. **Data Integrity**
 - Enforced via:
